@@ -1,0 +1,43 @@
+{
+  "model": "opusplan",
+  "effortLevel": "high",
+  "alwaysThinkingEnabled": true,
+  "permissions": {
+    "allow": [
+      "Bash(git *)",
+      "Bash(ls *)",
+      "Bash(cat *)",
+      "Bash(find *)",
+      "Bash(grep *)",
+      "Bash(wc *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(cp *)",
+      "Bash(mv *)",
+      "Bash(python3 *)",
+      "Edit(src/**)",
+      "Edit(docs/**)",
+      "Edit(tasks/**)",
+      "Edit(issues/**)",
+      "Edit(scripts/**)",
+      "Edit(.githooks/**)",
+      "Edit(.claude/agents/**)",
+      "Edit(.claude/skills/**)",
+      "Edit(.agents/skills/**)",
+      "Edit(README.md)",
+      "Edit(AGENTS.md)",
+      "Edit(CLAUDE.md)"
+    ],
+    "deny": [
+      "Bash(rm -rf *)"
+    ]
+  },
+  "hooks": {
+    "Notification": [
+      {
+        "type": "command",
+        "command": "bash .claude/hooks/context-reminder.sh"
+      }
+    ]
+  }
+}

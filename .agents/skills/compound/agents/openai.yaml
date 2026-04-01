@@ -1,0 +1,5 @@
+interface:
+  display_name: "Compound Learning"
+  short_description: "Capture reusable lessons from completed tasks into docs/learnings/."
+policy:
+  allow_implicit_invocation: false

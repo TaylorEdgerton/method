@@ -1,0 +1,5 @@
+interface:
+  display_name: "Update References"
+  short_description: "Rebuild docs/scriptReferences.md from current scripts and handlers."
+policy:
+  allow_implicit_invocation: false

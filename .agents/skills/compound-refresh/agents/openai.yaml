@@ -1,0 +1,5 @@
+interface:
+  display_name: "Compound Refresh"
+  short_description: "Review and maintain the learnings knowledge base."
+policy:
+  allow_implicit_invocation: false

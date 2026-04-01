@@ -1,0 +1,5 @@
+interface:
+  display_name: "Test Me"
+  short_description: "Run the knowledge-proof workflow and record understanding."
+policy:
+  allow_implicit_invocation: false

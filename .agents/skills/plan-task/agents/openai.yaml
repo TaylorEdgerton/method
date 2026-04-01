@@ -1,0 +1,5 @@
+interface:
+  display_name: "Plan Task"
+  short_description: "Write the implementation plan and stop for approval."
+policy:
+  allow_implicit_invocation: false

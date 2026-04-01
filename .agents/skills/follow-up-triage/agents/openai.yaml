@@ -1,0 +1,5 @@
+interface:
+  display_name: "Follow-Up Triage"
+  short_description: "Turn residual risk and deferred findings into visible follow-up work."
+policy:
+  allow_implicit_invocation: false

@@ -1,0 +1,10 @@
+#!/bin/bash
+# Remind to update task tracking after commits
+
+echo ""
+echo "────────────────────────────────────"
+echo "  ✓ Committed. Remember to:"
+echo "    • Update tasks/current.md"
+echo "    • /compact if context is high"
+echo "────────────────────────────────────"
+echo ""

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Checkpoint"
+  short_description: "Review task progress and suggest the next workflow step."
+policy:
+  allow_implicit_invocation: false
