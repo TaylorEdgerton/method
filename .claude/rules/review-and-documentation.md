@@ -2,7 +2,7 @@
 
 When editing `tasks/current.md` or skill files that orchestrate task completion:
 
-- Before moving a task to `awaiting-review-disposition` or `ready-to-wrap`, the
+- Before moving a task to `awaiting-review-disposition` or `awaiting-knowledge-proof`, the
   `## Review Findings` section must include results from all three review agents:
   - `code-reviewer`
   - `adversarial-referee`

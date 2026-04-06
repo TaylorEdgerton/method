@@ -15,6 +15,71 @@
 
 - [ ] [criterion]
 
+## Work Configuration
+
+- Work type:
+- Deliverable type:
+
+## Task Brief
+
+- Goal:
+- Acceptance criteria:
+- Constraints / invariants:
+- Risk areas:
+- Likely files / areas:
+- Design artifacts needed:
+- Open ambiguities:
+
+### Level Fit Notes
+
+- Level 1:
+- Level 2:
+- Level 3:
+- Level 4:
+
+### Runner Fit Notes
+
+- cheap:
+- balanced:
+- strong:
+
+## Build Configuration
+
+- Level:
+- Build profile:
+- Planning density:
+- Expected seam size:
+- Design pack required:
+- Design pack path:
+
+## Execution Notes
+
+- Active seam / section:
+- Assistance level reached:
+- Human authored first attempt:
+- Open risk:
+- AC / objective currently targeted:
+
+## Design Pack
+
+- Required:
+- Why:
+- Artifacts:
+	- sequence diagram
+	- activity diagram
+	- component / system diagram
+	- ADR
+	- implementation brief
+	- AC mapping
+- Links / paths:
+
+## Ownership Evidence
+
+- Evidence gathered during work:
+- Unresolved high-risk seams:
+- Tradeoffs explained by human:
+- Remaining proof focus:
+
 ## Research
 
 ### Relevant Files
@@ -75,7 +140,7 @@
 
 ## Knowledge Proof
 
-Leave this section untouched during `start`, `research`, and planning. Fill it during `test-me` or `wrap-up` once implementation exists and the human is actually being questioned.
+Leave this section untouched during `prepare`, `research`, and planning. Fill it during `test-me` or `finalise` once implementation exists and the human is actually being questioned.
 
 ### Scope Under Test
 

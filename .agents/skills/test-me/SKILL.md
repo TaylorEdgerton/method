@@ -5,12 +5,12 @@ description: Run the knowledge-proof workflow on the active task, score human un
 
 # Test Me
 
-Run the knowledge-proof workflow on the current task so the human must demonstrate operational understanding of the implementation before wrap-up.
+Run the knowledge-proof workflow on the current task so the human must demonstrate operational understanding of the implementation before finalise.
 
 ## Workflow
 
 1. Read `tasks/current.md`, the active story, the acceptance criteria, the current diff, and the changed files.
-2. Read the `## Verification Plan` and `## Review Findings` sections when they exist.
+2. Read the `## Verification Plan`, `## Review Findings`, `## Build Configuration`, and `## Ownership Evidence` sections when they exist.
 3. Identify the most important implementation flows, trust boundaries, edge cases, failure states, and any open findings the human should be able to explain.
 4. Decide whether this task needs a knowledge proof.
 
@@ -36,7 +36,7 @@ If the task is documentation-only or otherwise non-implementation work, record t
 - key flows under test
 - main risk areas
 
-6. Default to live human interrogation.
+6. Default to live human interrogation, but scale intensity to the selected build level and the risk areas still unresolved after reviewing `## Ownership Evidence`.
 
 Use `Interview mode: self-test` only if the user explicitly asked for a solo rehearsal or dry run.
 
@@ -140,7 +140,7 @@ Then provide a concise summary including:
 - whether the user passed
 - the score
 - the most important gaps
-- whether remediation is required before `wrap-up`
+- whether remediation is required before `finalise`
 - any review findings or verification gaps that materially affected the score
 
 ## Behaviour Rules
@@ -150,3 +150,4 @@ Then provide a concise summary including:
 - Do not let a polished generic explanation count as a pass.
 - Do not treat a model-authored summary as evidence that the human understands the change.
 - Do not mark the knowledge proof as passed unless the human shows enough understanding to safely own the change.
+- Use the lightest proof that still demonstrates ownership for lower-risk Level 1 to 2 work, and a stronger proof for higher-risk or more autonomous Level 3 to 4 work.

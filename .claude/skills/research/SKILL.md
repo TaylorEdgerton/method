@@ -30,7 +30,7 @@ Use this skill when the active task needs a codebase reconnaissance pass before 
 7. Update the task status fields:
    - `State: awaiting-answers` if unresolved questions remain
    - otherwise `State: ready-for-plan`
-   - `Next action:` should clearly state whether the user must answer questions or run `resume`
+   - `Next action:` should clearly state whether the user must answer questions or run `build`
 
 ## Rules
 

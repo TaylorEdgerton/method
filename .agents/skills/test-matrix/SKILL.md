@@ -5,12 +5,15 @@ description: Define the explicit verification plan for the active task by mappin
 
 # Test Matrix
 
-Use this skill after research or planning to make verification explicit before wrap-up.
+Use this skill after research or planning to make verification explicit before finalise.
 
 ## Workflow
 
 1. Read `tasks/current.md`, including:
    - acceptance criteria
+   - work configuration
+   - build configuration
+   - task brief
    - research findings
    - plan
    - risk areas

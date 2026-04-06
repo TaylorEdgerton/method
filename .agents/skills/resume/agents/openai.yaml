@@ -1,5 +1,0 @@
-interface:
-  display_name: "Continue Task"
-  short_description: "Resume the task, draft the plan, implement approved work, and coordinate review."
-policy:
-  allow_implicit_invocation: false

@@ -1,0 +1,5 @@
+interface:
+  display_name: "Finalise Task"
+  short_description: "Finalize the task, scale the ownership gate, and archive the task note."
+policy:
+  allow_implicit_invocation: false

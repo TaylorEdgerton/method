@@ -1,5 +1,0 @@
-interface:
-  display_name: "Wrap Up"
-  short_description: "Finalize the task, enforce the gate, and archive the task note."
-policy:
-  allow_implicit_invocation: false

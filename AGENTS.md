@@ -1,6 +1,6 @@
 # Repo Agent Policy
 
-This repository uses a skill-first workflow.
+This repository uses a skill-first workflow with explicit build levels.
 
 ## Runtime locations
 
@@ -15,11 +15,12 @@ This repository uses a skill-first workflow.
 For tasks that change code, logic, automation, validation, permissions, state transitions, schema, scripts, or error handling:
 
 1. Keep `tasks/current.md` updated during the task.
-2. Use `start` to activate work and `resume` to move it through research, planning, implementation, and review.
-3. Record review findings, verification planning, and understanding results in `tasks/current.md`.
-4. If the understanding result is below threshold, complete remediation or add an override note before wrap-up.
-5. Run the `wrap-up` skill before committing/pushing final changes.
-6. Treat the knowledge proof as a human interrogation step. Do not pre-fill scores, gaps, or remediation during `start`, `research`, or planning.
+2. Use `prepare` to activate work and `build` to move it through planning, implementation, and review.
+3. Choose an explicit build level before implementation begins and record the build profile in `tasks/current.md`.
+4. Record review findings, verification planning, execution notes, and ownership evidence in `tasks/current.md`.
+5. If the understanding result is below threshold, complete remediation or add an override note before `finalise`.
+6. Run the `finalise` skill before committing or pushing final changes.
+7. Treat the knowledge proof as a human interrogation step. Do not pre-fill scores, gaps, or remediation during `prepare`, `research`, or planning.
 
 ## Knowledge-proof threshold
 
@@ -27,8 +28,8 @@ Normal ownership threshold is `8/10` equivalent.
 
 - `>= 85%`: strong understanding
 - `70-84%`: acceptable, but record gaps
-- `60-69%`: remediation required before wrap-up
-- `<60%`: do not wrap up without an explicit override note
+- `60-69%`: remediation required before `finalise`
+- `<60%`: do not finalise without an explicit override note
 
 ## Files that matter
 
@@ -44,14 +45,18 @@ Normal ownership threshold is `8/10` equivalent.
 
 - User-facing entry points:
   - `init`: one-time project bootstrap — configure the control plane, populate CLAUDE.md, set up hooks
-  - `start`: activate the next or selected backlog story and run the initial research pass
-  - `resume`: resume from task state, draft the plan, implement approved work, and coordinate review
-  - `wrap-up`: finish, archive, and reset the active task while enforcing the understanding gate
+  - `prepare`: activate the next or selected backlog story, run research, and capture the Task Brief
+  - `build`: materialize the execution plan, route work through the selected build level, and coordinate review
+  - `finalise`: finish, archive, and reset the active task while enforcing the scaled understanding gate
 - Internal helper skills:
   - `research`
   - `plan-task`
   - `test-matrix`
   - `checkpoint`
+  - `build-level-1`
+  - `build-level-2`
+  - `build-level-3`
+  - `build-level-4`
   - `update-references`
   - `test-me`
   - `follow-up-triage`
@@ -86,12 +91,11 @@ Claude Code equivalents live in `.claude/agents/` as markdown files with the sam
 
 ## Codex guardrails
 
-Since Codex does not read `.claude/rules/`, key guardrails are duplicated here:
-
 - Do not pre-fill knowledge-proof scores or remediation before `test-me` questions the user.
 - Do not bypass the pre-push hook with `--no-verify` or equivalent.
 - Do not force-push or push directly to `main` without explicit user confirmation.
 - Keep `tasks/current.md` current throughout the task.
+- Record Work Configuration, Task Brief, Build Configuration, Execution Notes, and Ownership Evidence as the task progresses.
 - Use the `US-XXX` format for backlog story IDs; never renumber existing stories.
 - Use Mermaid syntax for all diagrams in `docs/`.
 - After modifying scripts, remind the user to run `update-references`.

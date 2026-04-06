@@ -1,5 +1,0 @@
-interface:
-  display_name: "Start Task"
-  short_description: "Activate the next backlog story and populate tasks/current.md."
-policy:
-  allow_implicit_invocation: false

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Gate pushes/wrap-up based on the knowledge-proof status in tasks/current.md.
+"""Gate pushes/finalise based on the knowledge-proof status in tasks/current.md.
 
 The script is intentionally conservative:
 - If there is no active task, it exits 0.

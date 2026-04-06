@@ -7,7 +7,7 @@ description: One-time control-plane bootstrap for a project — validate configu
 
 Use this skill when binding the template control plane to a real project after cloning the
 template. It validates the target repo, fills in the project identity files, and configures
-the control plane so that `/start`, `/resume`, and `/wrap-up` can function correctly.
+the control plane so that `/prepare`, `/build`, and `/finalise` can function correctly.
 
 ## Pre-flight
 
@@ -41,13 +41,13 @@ the control plane so that `/start`, `/resume`, and `/wrap-up` can function corre
    the user whether any should be removed for their project.
 7. **Verify** — run `python3 scripts/ensure_control_plane.py` again and confirm
    exit code is **0**.
-8. Summarise what was configured and tell the user to run `/start` when ready.
+8. Summarise what was configured and tell the user to run `/prepare` when ready.
 
 ## Rules
 
 - This skill is idempotent — running it again should detect what's already done
   and only prompt for missing items.
-- Do not modify workflow skills (`start`, `resume`, `wrap-up`, etc.) — only
+- Do not modify workflow skills (`prepare`, `build`, `finalise`, etc.) — only
   domain skills and project identity files.
 - Do not create git commits or push. The user decides when to commit.
 - If the user wants to skip a step (e.g., keep all agents), respect that.

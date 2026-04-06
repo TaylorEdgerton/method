@@ -24,10 +24,9 @@ Use this skill during implementation to keep `tasks/current.md` honest and curre
    - `implementing`
    - `awaiting-review-disposition`
    - `awaiting-knowledge-proof`
-   - `ready-to-wrap`
 9. If implementation work is effectively done, point to the next step:
-   - `resume` when review passes still need to run or findings need disposition
-   - `wrap-up` when the task is ready for the understanding gate and closure
+   - `build` when review passes still need to run or findings need disposition
+   - `finalise` when the task is ready for the understanding gate and closure
 
 ## Rules
 

@@ -4,23 +4,27 @@ Use repo skills for reusable workflows.
 
 ## Project
 
-- Name: [PROJECT_NAME]
-- Summary: [Brief description of this project]
-- Stack: [Primary languages, frameworks, and tools]
+- Name: Method
+- Summary: AI-assisted workflow control-plane template for structured software delivery with tasks, reviews, and understanding gates.
+- Stack: Markdown, Python, Git hooks, Claude Code/Codex skills, subagents, and repository automation
 
 ## Workflow Skills
 
 User-facing entry points:
 - `init`: one-time project bootstrap — configure the control plane, populate CLAUDE.md, set up hooks
-- `start`: activate the next or selected backlog story and run the initial research pass
-- `resume`: resume from task state, draft the plan, implement approved work, and coordinate review
-- `wrap-up`: finish, archive, and reset the active task while enforcing the understanding gate
+- `prepare`: activate the next or selected backlog story, run research, and capture the Task Brief
+- `build`: materialize the execution plan, route work through the selected build level, and coordinate review
+- `finalise`: finish, archive, and reset the active task while enforcing the scaled understanding gate
 
 Internal helper skills:
 - `research`: inspect the codebase and document findings before planning
-- `plan-task`: turn research into an approval-ready implementation plan
+- `plan-task`: turn the Task Brief and build configuration into an approval-ready execution plan
 - `test-matrix`: define the explicit verification plan
 - `checkpoint`: review progress, repo state, and next actions
+- `build-level-1`: coaching-first helper for human-authored narrow seams
+- `build-level-2`: structure-first helper that avoids taking over authorship
+- `build-level-3`: collaborative helper for intent-first, approval-gated seams
+- `build-level-4`: explicit high-autonomy helper for larger, reviewable execution
 - `update-references`: refresh `docs/scriptReferences.md`
 - `test-me`: run the knowledge-proof interrogation and remediation workflow
 - `follow-up-triage`: turn accepted risks or deferred findings into visible follow-up work
@@ -34,8 +38,7 @@ Behavioral guardrails are enforced via `.claude/rules/`, `.githooks/pre-push`, a
 
 Critical rules (duplicated here for belt-and-suspenders reliability):
 
-- Do not pre-fill knowledge-proof scores or remediation before `test-me` actually
-  questions the user.
+- Do not pre-fill knowledge-proof scores or remediation before `test-me` actually questions the user.
 - Do not bypass the pre-push hook with `--no-verify`.
 - Do not force-push or push directly to `main` without explicit user confirmation.
 
@@ -51,8 +54,8 @@ Normal ownership threshold is `8/10` equivalent.
 
 - `>= 85%`: strong understanding
 - `70-84%`: acceptable, but record gaps
-- `60-69%`: remediation required before wrap-up
-- `<60%`: do not wrap up without an explicit override note
+- `60-69%`: remediation required before `finalise`
+- `<60%`: do not finalise without an explicit override note
 
 ## Current State
 
