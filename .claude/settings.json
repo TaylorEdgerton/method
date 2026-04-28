@@ -35,8 +35,8 @@
   "hooks": {
     "Notification": [
       {
-        "type": "command",
-        "command": "bash .claude/hooks/context-reminder.sh"
+        "hooks": [
+        ]
       }
     ]
   }
