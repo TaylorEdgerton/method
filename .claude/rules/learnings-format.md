@@ -1,5 +1,6 @@
 ---
-globs: docs/learnings/**
+paths:
+  - "docs/learnings/**"
 ---
 
 # Learnings File Format

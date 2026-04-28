@@ -36,7 +36,7 @@ Internal helper skills:
 Behavioral guardrails are enforced via `.claude/rules/`, `.githooks/pre-push`, and
 `scripts/check_understanding_gate.py`. See those files for details.
 
-Critical rules (duplicated here for belt-and-suspenders reliability):
+Critical rules (duplicated here for reliability):
 
 - Do not pre-fill knowledge-proof scores or remediation before `test-me` actually questions the user.
 - Do not bypass the pre-push hook with `--no-verify`.
@@ -68,4 +68,4 @@ Normal ownership threshold is `8/10` equivalent.
 
 ## Reminder
 
-Use skills for rich workflow instructions. Keep this file short and durable.
+Use skills for rich workflow instructions. If you edit, keep this file short and durable.

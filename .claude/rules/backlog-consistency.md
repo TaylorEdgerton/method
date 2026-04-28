@@ -1,5 +1,6 @@
 ---
-globs: docs/backlog.md
+paths:
+  - "docs/backlog.md"
 ---
 
 # Backlog Consistency

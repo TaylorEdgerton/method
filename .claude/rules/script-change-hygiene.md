@@ -1,5 +1,6 @@
 ---
-globs: scripts/**
+paths:
+  - "scripts/**"
 ---
 
 # Script Change Hygiene

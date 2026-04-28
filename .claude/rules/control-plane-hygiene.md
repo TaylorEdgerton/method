@@ -1,7 +1,3 @@
----
-globs: "**"
----
-
 # Control Plane Hygiene
 
 If `CLAUDE.md` still contains template placeholders (`[PROJECT_NAME]`,

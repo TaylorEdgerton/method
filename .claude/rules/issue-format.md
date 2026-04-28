@@ -1,5 +1,6 @@
 ---
-globs: issues/**
+paths:
+  - "issues/**"
 ---
 
 # Issue File Format

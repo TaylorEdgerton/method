@@ -1,7 +1,3 @@
----
-globs: "**"
----
-
 # Git Safety
 
 - NEVER use `--no-verify` on any git command. The pre-push hook runs

@@ -1,5 +1,6 @@
 ---
-globs: docs/**
+paths:
+  - "docs/**"
 ---
 
 # Diagram Documentation
